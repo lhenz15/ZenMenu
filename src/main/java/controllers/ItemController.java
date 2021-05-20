@@ -9,8 +9,8 @@ public class ItemController {
 
     private ItemRepository itemRepository;
 
-    public ItemController() {
-        this.itemRepository = new ItemRepository();
+    public ItemController(ItemRepository itemRepository) {
+        this.itemRepository = itemRepository;
     }
 
     public void add(Item item){

@@ -1,13 +1,13 @@
 package repositories;
 
-public interface IGenericRepository<T> {
-    void add(T t);
+public interface IGenericRepository<E, K> {
+    void add(E t);
 
-    T update(T t);
+    E update(E t);
 
-    T delete(Integer id);
+    E delete(K id);
 
-    T find(Integer id);
+    E find(K id);
 
-    Iterable<T> findAll();
+    Iterable<E> findAll();
 }

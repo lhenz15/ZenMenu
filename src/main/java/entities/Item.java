@@ -5,6 +5,20 @@ public class Item {
     private String name;
     private double quantity;
 
+    public Item() {
+    }
+
+    public Item(String name, double quantity) {
+        this.name = name;
+        this.quantity = quantity;
+    }
+
+    public Item(int id, String name, double quantity) {
+        this.id = id;
+        this.name = name;
+        this.quantity = quantity;
+    }
+
     public int getId() {
         return id;
     }

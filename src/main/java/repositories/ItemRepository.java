@@ -1,52 +1,42 @@
 package repositories;
 
 import entities.Item;
+import utils.EntityNotFoundException;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.Optional;
+import java.util.stream.Collectors;
 
-public class ItemRepository implements IGenericRepository<Item> {
+public class ItemRepository implements IGenericRepository<Item, Integer> {
 
-    private Map<Integer, Item> items = new HashMap<>();
+    final private Map<Integer, Item> items = new HashMap<>();
     private int itemId = 1;
 
     @Override
     public void add(Item item) {
-        item.setId(itemId);
+        item.setId(itemId++);
         items.put(item.getId(), item);
-
-        itemId++;
     }
 
     @Override
     public Item update(Item item) {
-        if (item != null && items.containsKey(item.getId())) {
-            return items.replace(item.getId(), item);
-        }
-
-        return null;
+        return Optional.ofNullable(items.replace(item.getId(), item)).orElseThrow(EntityNotFoundException::new);
     }
 
     @Override
     public Item delete(Integer id) {
-        if (id != null && items.containsKey(id)) {
-            return items.remove(id);
-        }
-
-        return null;
+        return Optional.ofNullable(items.remove(id)).orElseThrow(EntityNotFoundException::new);
     }
 
     @Override
     public Item find(Integer id) {
-        if (id != null && items.containsKey(id)) {
-            return items.get(id);
-        }
-
-        return null;
+        return Optional.ofNullable(items.get(id)).orElseThrow(EntityNotFoundException::new);
     }
 
     @Override
-    public Iterable<Item> findAll() {
-        return items.values();
+    public List<Item> findAll() {
+        return items.values().stream().collect(Collectors.toList());
     }
 }
