@@ -1,6 +1,7 @@
 package entities;
 
 public class InventoryItem {
+    private long id;
     private Inventory inventory;
     private Item item;
     private Integer quantity;
@@ -12,6 +13,14 @@ public class InventoryItem {
         this.inventory = inventory;
         this.item = item;
         this.quantity = quantity;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 
     public Inventory getInventory() {
