@@ -11,7 +11,7 @@ import java.util.stream.Collectors;
 
 public class ItemRepository implements IGenericRepository<Item, Integer> {
 
-    final private Map<Integer, Item> items = new HashMap<>();
+    final private Map<Long, Item> items = new HashMap<>();
     private int itemId = 1;
 
     @Override
