@@ -6,6 +6,9 @@ The class to represent the raw materials and the utensils used in the restaurant
 ## entities.Inventory
 Class used to manage to items in stock.
 
+## entities.InventoryItem
+Class used to manage the relation of an Item and an Inventory.
+
 ## entities.Product
 Class used to represent dishes, desserts, drinks and other specialties.
 
@@ -13,7 +16,7 @@ Class used to represent dishes, desserts, drinks and other specialties.
 Enum to represent the types used in the product class.
 
 ## entities.Menu
-Class to represent the list of products in stock.
+Class to represent the  of products in stock.
 
 ## entities.Order
 Class to represent the products consumed by the customers.
@@ -30,5 +33,14 @@ Class to represent the products and the orderTaxes presents in an order.
 ## entities.OrderStatus
 Enum to represent the condition of an order.
 
+## repositories.IGenericRepository
+Interface to define the generic methods that need to be presents on a repository.
+
+## repositories.ItemRepository
+Class to implement the methods used to persist an Item.
+
+## controllers.ItemController
+Class used to manage and present an
+
 ## UML Class Diagram
-![image](https://user-images.githubusercontent.com/12875895/116785412-67842900-aa67-11eb-9f9c-bffe5a2e48b2.png)
+![image](https://user-images.githubusercontent.com/12875895/119278422-3bd20a00-bbf3-11eb-87e9-aa8d09c6c598.png)
