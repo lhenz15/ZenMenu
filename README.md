@@ -57,6 +57,9 @@ Class to implement the methods used to persist an ProductRepository.
 ## repositories.OrderDetail
 Class to implement the methods used to persist an OrderDetail.
 
+## repositories.OrderPayment
+Class to implement the methods used to persist and OrderPayment.
+
 ## UML Class Diagram
-![image](https://user-images.githubusercontent.com/12875895/119288021-c75c9280-bc15-11eb-9c28-3094f3c9a727.png)
-![image](https://user-images.githubusercontent.com/12875895/119288050-d4798180-bc15-11eb-887f-9ba18c828585.png)
+![image](https://user-images.githubusercontent.com/12875895/119288688-0d662600-bc17-11eb-9c34-6e7a4baee359.png)
+![image](https://user-images.githubusercontent.com/12875895/119288710-1a831500-bc17-11eb-88fe-38a7e19f8b41.png)
