@@ -51,5 +51,12 @@ Class to implement the methods used to persist an InventoryItem.
 ## repositories.MenuRepository
 Class to implement the methods used to persist an InventoryItem.
 
+## repositories.ProductRepository
+Class to implement the methods used to persist an ProductRepository.
+
+## repositories.OrderDetail
+Class to implement the methods used to persist an OrderDetail.
+
 ## UML Class Diagram
-![image](https://user-images.githubusercontent.com/12875895/119281623-637d9e00-bc04-11eb-85da-2bbfae43d0fd.png)
+![image](https://user-images.githubusercontent.com/12875895/119288021-c75c9280-bc15-11eb-9c28-3094f3c9a727.png)
+![image](https://user-images.githubusercontent.com/12875895/119288050-d4798180-bc15-11eb-887f-9ba18c828585.png)
