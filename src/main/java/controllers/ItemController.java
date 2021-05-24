@@ -21,15 +21,15 @@ public class ItemController {
         return itemRepository.update(item);
     }
 
-    public Item delete(Integer id){
+    public Item delete(Long id){
         return itemRepository.delete(id);
     }
 
-    public Item find(Integer id){
+    public Item find(Long id){
         return itemRepository.find(id);
     }
 
     public List<Item> findAll(){
-        return (List<Item>) itemRepository.findAll();
+        return itemRepository.findAll();
     }
 }

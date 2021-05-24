@@ -9,7 +9,7 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-public class ItemRepository implements IGenericRepository<Item, Integer> {
+public class ItemRepository implements IGenericRepository<Item, Long> {
 
     final private Map<Long, Item> items = new HashMap<>();
     private int itemId = 1;
@@ -26,12 +26,12 @@ public class ItemRepository implements IGenericRepository<Item, Integer> {
     }
 
     @Override
-    public Item delete(Integer id) {
+    public Item delete(Long id) {
         return Optional.ofNullable(items.remove(id)).orElseThrow(EntityNotFoundException::new);
     }
 
     @Override
-    public Item find(Integer id) {
+    public Item find(Long id) {
         return Optional.ofNullable(items.get(id)).orElseThrow(EntityNotFoundException::new);
     }
 
