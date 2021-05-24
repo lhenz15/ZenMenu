@@ -40,7 +40,13 @@ Interface to define the generic methods that need to be presents on a repository
 Class to implement the methods used to persist an Item.
 
 ## controllers.ItemController
-Class used to manage and present an
+Class used to manage and present an Item.
+
+## repositories.InventoryRepository
+Class to implement the methods used to persist an Inventory.
+
+## repositories.InventoryItemRepository
+Class to implement the methods used to persist an InventoryItem.
 
 ## UML Class Diagram
-![image](https://user-images.githubusercontent.com/12875895/119278422-3bd20a00-bbf3-11eb-87e9-aa8d09c6c598.png)
+![image](https://user-images.githubusercontent.com/12875895/119280635-41821c80-bc00-11eb-8f80-74cbd675790e.png)
