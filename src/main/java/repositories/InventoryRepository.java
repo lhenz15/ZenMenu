@@ -4,11 +4,12 @@ import entities.Inventory;
 import utils.EntityNotFoundException;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-public class InventoryRepository implements IGenericRepository<Inventory, Integer>{
+public class InventoryRepository implements IGenericRepository<Inventory, Long>{
 
     final private Map<Long, Inventory> inventories = new HashMap<>();
     private long inventoryId = 1;
@@ -25,17 +26,17 @@ public class InventoryRepository implements IGenericRepository<Inventory, Intege
     }
 
     @Override
-    public Inventory delete(Integer id) {
+    public Inventory delete(Long id) {
         return Optional.ofNullable(inventories.remove(id)).orElseThrow(EntityNotFoundException::new);
     }
 
     @Override
-    public Inventory find(Integer id) {
+    public Inventory find(Long id) {
         return Optional.ofNullable(inventories.get(id)).orElseThrow(EntityNotFoundException::new);
     }
 
     @Override
-    public Iterable<Inventory> findAll() {
+    public List<Inventory> findAll() {
         return inventories.values().stream().collect(Collectors.toList());
     }
 }

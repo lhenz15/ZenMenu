@@ -4,6 +4,7 @@ import entities.InventoryItem;
 import utils.EntityNotFoundException;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -34,7 +35,7 @@ public class InventoryItemRepository implements IGenericRepository<InventoryItem
     }
 
     @Override
-    public Iterable<InventoryItem> findAll() {
+    public List<InventoryItem> findAll() {
         return inventoryItemMap.values().stream().collect(Collectors.toList());
     }
 }
