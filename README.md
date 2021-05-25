@@ -57,7 +57,7 @@ Class to implement the methods used to persist an ProductRepository.
 ## repositories.OrderDetail
 Class to implement the methods used to persist an OrderDetail.
 
-## repositories.OrderPayment
+## repositories.impl.map.OrderPaymentRepositoryImpl
 Class to implement the methods used to persist and OrderPayment.
 
 ## repositories.Order
