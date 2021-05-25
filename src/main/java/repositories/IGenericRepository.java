@@ -1,5 +1,7 @@
 package repositories;
 
+import java.util.Collection;
+
 public interface IGenericRepository<E, K> {
     void add(E t);
 
@@ -9,5 +11,5 @@ public interface IGenericRepository<E, K> {
 
     E find(K id);
 
-    Iterable<E> findAll();
+    Collection<E> findAll();
 }
