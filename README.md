@@ -48,7 +48,7 @@ Class to implement the methods used to persist an Inventory.
 ## repositories.InventoryItemRepository
 Class to implement the methods used to persist an InventoryItem.
 
-## repositories.MenuRepository
+## repositories.impl.map.MenuRepositoryImpl
 Class to implement the methods used to persist an InventoryItem.
 
 ## repositories.ProductRepository
