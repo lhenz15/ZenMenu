@@ -36,13 +36,13 @@ Enum to represent the condition of an order.
 ## repositories.IGenericRepository
 Interface to define the generic methods that need to be presents on a repository.
 
-## repositories.ItemRepository
+## repositories.impl.map.ItemRepositoryImpl
 Class to implement the methods used to persist an Item.
 
 ## controllers.ItemController
 Class used to manage and present an Item.
 
-## repositories.InventoryRepository
+## repositories.impl.map.InventoryRepositoryImpl
 Class to implement the methods used to persist an Inventory.
 
 ## repositories.InventoryItemRepository
