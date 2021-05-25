@@ -54,7 +54,7 @@ Class to implement the methods used to persist an InventoryItem.
 ## repositories.ProductRepository
 Class to implement the methods used to persist an ProductRepository.
 
-## repositories.OrderDetail
+## repositories.impl.map.OrderDetailRepositoryImpl
 Class to implement the methods used to persist an OrderDetail.
 
 ## repositories.OrderPayment
