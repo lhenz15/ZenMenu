@@ -63,6 +63,9 @@ Class to implement the methods used to persist and OrderPayment.
 ## repositories.Order
 Class to implement the methods used to persist and Order.
 
+## controllers.InventoryController
+Class used to manage and present an Inventory.
+
 ## UML Class Diagram
 ![image](https://user-images.githubusercontent.com/12875895/119288688-0d662600-bc17-11eb-9c34-6e7a4baee359.png)
-![image](https://user-images.githubusercontent.com/12875895/119345922-83927900-bc67-11eb-8c9a-135c6b887d79.png)
+![image](https://user-images.githubusercontent.com/12875895/119424492-90e54d00-bcd3-11eb-8895-e74d8695eea8.png)
