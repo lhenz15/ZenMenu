@@ -45,7 +45,7 @@ Class used to manage and present an Item.
 ## repositories.impl.map.InventoryRepositoryImpl
 Class to implement the methods used to persist an Inventory.
 
-## repositories.InventoryItemRepository
+## repositories.impl.map.InventoryItemRepositoryImpl
 Class to implement the methods used to persist an InventoryItem.
 
 ## repositories.MenuRepository
