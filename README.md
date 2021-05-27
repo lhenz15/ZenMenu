@@ -33,7 +33,7 @@ Class to represent the products and the orderTaxes presents in an order.
 ## entities.OrderStatus
 Enum to represent the condition of an order.
 
-## repositories.IGenericRepository
+## repositories.GenericRepository
 Interface to define the generic methods that need to be presents on a repository.
 
 ## repositories.impl.map.ItemRepositoryImpl

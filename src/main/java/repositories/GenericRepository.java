@@ -2,7 +2,7 @@ package repositories;
 
 import java.util.Collection;
 
-public interface IGenericRepository<E, K> {
+public interface GenericRepository<E, K> {
     void add(E t);
 
     E update(E t);

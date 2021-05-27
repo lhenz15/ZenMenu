@@ -4,6 +4,6 @@ import entities.Product;
 
 import java.util.List;
 
-public interface ProductRepository extends IGenericRepository<Product, Long> {
+public interface ProductRepository extends GenericRepository<Product, Long> {
     List<Product> findAll();
 }
