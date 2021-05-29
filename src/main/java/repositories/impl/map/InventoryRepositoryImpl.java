@@ -1,7 +1,6 @@
 package repositories.impl.map;
 
 import entities.Inventory;
-import repositories.IGenericRepository;
 import repositories.InventoryRepository;
 import utils.EntityNotFoundException;
 
