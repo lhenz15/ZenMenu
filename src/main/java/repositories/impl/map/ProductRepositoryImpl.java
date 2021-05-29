@@ -2,7 +2,7 @@ package repositories.impl.map;
 
 import entities.Product;
 import repositories.ProductRepository;
-import utils.EntityNotFoundException;
+import exceptions.EntityNotFoundException;
 
 import java.util.HashMap;
 import java.util.List;
