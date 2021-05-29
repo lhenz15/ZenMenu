@@ -1,6 +1,6 @@
 package utils;
 
-import controllers.ItemController;
+import controllers.*;
 import entities.Item;
 import exceptions.DuplicatedKeyException;
 import exceptions.InstanceNotFoundException;
@@ -14,6 +14,11 @@ public class IoC {
     private static IoC instance;
     private static Map<String, Object> instanceMap = new HashMap<>();
 
+    private IoC(){
+        initRepositories();
+        initControllers();
+    };
+
     private void initRepositories(){
         putInstance("ItemRepository", new ItemRepositoryImpl());
         putInstance("InventoryRepository", new InventoryRepositoryImpl());
@@ -25,9 +30,16 @@ public class IoC {
         putInstance("OrderPaymentRepository", new OrderPaymentRepositoryImpl());
     }
 
-    private IoC(){
-        initRepositories();
-    };
+    private void initControllers(){
+        putInstance("ItemController", new ItemController(getInstance("ItemRepository")));
+        putInstance("InventoryController", new InventoryController(getInstance("InventoryRepository")));
+        putInstance("InventoryItemController", new InventoryItemController(getInstance("InventoryItemRepository")));
+        putInstance("MenuController", new MenuController(getInstance("MenuRepository")));
+        putInstance("ProductController", new ProductController(getInstance("ProductRepository")));
+        putInstance("OrderController", new OrderController(getInstance("OrderRepository")));
+        putInstance("OrderDetailController", new OrderDetailController(getInstance("OrderDetailRepository")));
+        putInstance("OrderPaymentController", new OrderPaymentController(getInstance("OrderPaymentRepository")));
+    }
 
     public static IoC getInstance(){
         if(instance == null)
