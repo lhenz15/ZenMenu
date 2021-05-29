@@ -2,7 +2,7 @@ package repositories.impl.map;
 
 import entities.OrderDetail;
 import repositories.OrderDetailRepository;
-import utils.EntityNotFoundException;
+import exceptions.EntityNotFoundException;
 
 import java.util.HashMap;
 import java.util.List;
