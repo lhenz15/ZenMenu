@@ -4,5 +4,6 @@ public class RunTest {
         InventoryItemTest.test();
         InventoryTest.test();
         ProductTest.test();
+        MenuTest.test();
     }
 }
