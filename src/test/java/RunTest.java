@@ -3,5 +3,6 @@ public class RunTest {
         ItemTest.test();
         InventoryItemTest.test();
         InventoryTest.test();
+        ProductTest.test();
     }
 }
