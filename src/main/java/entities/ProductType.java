@@ -7,5 +7,6 @@ public enum ProductType {
     SIDE,
     PASTA,
     DESSERT,
-    DRINK
+    DRINK,
+    BURGER
 }
