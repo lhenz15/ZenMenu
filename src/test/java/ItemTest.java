@@ -8,7 +8,7 @@ import java.util.List;
 
 public class ItemTest {
 
-    public static void main(String[] args) {
+    public static void test() {
 
         IoC ioc = IoC.getInstance();
 
@@ -17,9 +17,12 @@ public class ItemTest {
         Item chair = new Item("Chair");
         Item table = new Item("Table");
         Item waterBottle = new Item("Water Bottle");
+        Item orangeJuicy = new Item("Orange Juicy");
 
         System.out.println(ItemRepository.class.getName());
 
+        System.out.println("--------------------------------------------------------------");
+        System.out.println("---------------Testing Item structure-------------------------");
         System.out.println("Testing ItemController.add()");
         System.out.println("Adding Chair Item");
         itemController.add(chair);
@@ -38,12 +41,14 @@ public class ItemTest {
         System.out.println(itemController.find(2L).getName());
 
         System.out.println("\nTesting ItemController.delete() | Must throw EntityNotFoundException");
-        itemController.delete(3L);
+        itemController.add(orangeJuicy);
+        itemController.delete(4L);
         try {
-            itemController.find(3L);
+            itemController.find(4L);
         } catch (EntityNotFoundException e){
             System.out.println(e.getMessage());
         }
+        itemController.add(orangeJuicy);
 
         System.out.println("\nTesting ItemController.update() | Updating Chair Item to Large Chair");
         Item itemToUpdate = itemController.find(1L);
