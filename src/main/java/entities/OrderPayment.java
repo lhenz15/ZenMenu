@@ -1,6 +1,6 @@
 package entities;
 
-public abstract class OrderPayment {
+public class OrderPayment {
     private long id;
     private double amount;
 
