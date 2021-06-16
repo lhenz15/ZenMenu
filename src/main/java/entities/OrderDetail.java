@@ -6,6 +6,7 @@ public class OrderDetail {
     private long id;
     private List<Product> products;
     private List<OrderTax> orderTaxes;
+    private OrderComplexity orderComplexity;
 
     public OrderDetail() {
     }
@@ -43,5 +44,13 @@ public class OrderDetail {
 
     public void setOrderTaxes(List<OrderTax> orderTaxes) {
         this.orderTaxes = orderTaxes;
+    }
+
+    public OrderComplexity getOrderComplexity() {
+        return orderComplexity;
+    }
+
+    public void setOrderComplexity(OrderComplexity orderComplexity) {
+        this.orderComplexity = orderComplexity;
     }
 }
