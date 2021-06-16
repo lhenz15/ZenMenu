@@ -7,5 +7,6 @@ public class RunTest {
         MenuTest.test();
         OrderPaymentTest.test();
         OrderDetailTest.test();
+        OrderTest.test();
     }
 }

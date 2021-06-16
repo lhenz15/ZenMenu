@@ -10,6 +10,26 @@ public class Order {
     private String customer;
     private OrderPayment orderPayment;
 
+    public Order() {
+    }
+
+    public Order(ZonedDateTime date, OrderStatus orderStatus, OrderDetail orderDetail, String customer, OrderPayment orderPayment) {
+        this.date = date;
+        this.orderStatus = orderStatus;
+        this.orderDetail = orderDetail;
+        this.customer = customer;
+        this.orderPayment = orderPayment;
+    }
+
+    public Order(long id, ZonedDateTime date, OrderStatus orderStatus, OrderDetail orderDetail, String customer, OrderPayment orderPayment) {
+        this.id = id;
+        this.date = date;
+        this.orderStatus = orderStatus;
+        this.orderDetail = orderDetail;
+        this.customer = customer;
+        this.orderPayment = orderPayment;
+    }
+
     public long getId() {
         return id;
     }
