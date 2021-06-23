@@ -1,11 +1,11 @@
 package models;
 
-public class OrderStatus {
+public class StatusOrder {
 
     private entities.OrderStatus orderStatus;
     private Long orderId;
 
-    public OrderStatus(entities.OrderStatus orderStatus, Long orderId) {
+    public StatusOrder(entities.OrderStatus orderStatus, Long orderId) {
         this.orderStatus = orderStatus;
         this.orderId = orderId;
     }
