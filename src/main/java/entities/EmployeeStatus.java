@@ -1,6 +1,6 @@
 package entities;
 
-public enum ChefStatus {
+public enum EmployeeStatus {
     AVAILABLE,
     BUSY
 }

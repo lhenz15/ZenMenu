@@ -2,23 +2,18 @@ package entities;
 
 public class Chef extends Employee {
     private ChefExperience experience;
-    private ChefStatus status;
 
-    public Chef(ChefExperience experience, ChefStatus status) {
-        this.experience = experience;
-        this.status = status;
+    public Chef() {
     }
 
-    public Chef(String name, ChefExperience experience, ChefStatus status) {
-        super(name);
+    public Chef(String name, EmployeeStatus status, ChefExperience experience) {
+        super(name, status);
         this.experience = experience;
-        this.status = status;
     }
 
-    public Chef(long id, String name, ChefExperience experience, ChefStatus status) {
-        super(id, name);
+    public Chef(long id, String name, EmployeeStatus status, ChefExperience experience) {
+        super(id, name, status);
         this.experience = experience;
-        this.status = status;
     }
 
     public ChefExperience getExperience() {
@@ -27,13 +22,5 @@ public class Chef extends Employee {
 
     public void setExperience(ChefExperience experience) {
         this.experience = experience;
-    }
-
-    public ChefStatus getStatus() {
-        return status;
-    }
-
-    public void setStatus(ChefStatus status) {
-        this.status = status;
     }
 }
