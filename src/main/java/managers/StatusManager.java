@@ -14,6 +14,6 @@ public class StatusManager<E> {
     }
 
     public E dequeue(String status){
-        return (E) queueMap.get(status).peek();
+        return (E) queueMap.get(status).poll();
     }
 }
