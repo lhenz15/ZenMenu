@@ -3,7 +3,6 @@ package utils;
 import controllers.*;
 import exceptions.DuplicatedKeyException;
 import exceptions.InstanceNotFoundException;
-import managers.OrderQueueManager;
 import repositories.impl.map.*;
 
 import java.util.HashMap;
@@ -17,7 +16,6 @@ public class IoC {
     private IoC(){
         initRepositories();
         initControllers();
-        initManagers();
     };
 
     private void initRepositories(){
@@ -28,8 +26,6 @@ public class IoC {
         putInstance("ProductRepository", new ProductRepositoryImpl());
         putInstance("OrderRepository", new OrderRepositoryImpl());
         putInstance("OrderDetailRepository", new OrderDetailRepositoryImpl());
-        putInstance("OrderPaymentRepository", new OrderPaymentRepositoryImpl());
-        putInstance("WaiterRepository", new OrderPaymentRepositoryImpl());
         putInstance("OrderPaymentRepository", new OrderPaymentRepositoryImpl());
         putInstance("WaiterRepository", new WaiterRepositoryImpl());
         putInstance("ChefRepository", new ChefRepositoryImpl());
@@ -42,12 +38,10 @@ public class IoC {
         putInstance("MenuController", new MenuController(getInstance("MenuRepository")));
         putInstance("ProductController", new ProductController(getInstance("ProductRepository")));
         putInstance("OrderController", new OrderController(getInstance("OrderRepository")));
+        putInstance("OrderDetailController", new OrderDetailController(getInstance("OrderDetailRepository")));
+        putInstance("OrderPaymentController", new OrderPaymentController(getInstance("OrderPaymentRepository")));
         putInstance("WaiterController", new WaiterController(getInstance("WaiterRepository")));
         putInstance("ChefController", new ChefController(getInstance("ChefRepository")));
-    }
-
-    private void initManagers(){
-        putInstance("OrderQueueManager", new OrderQueueManager());
     }
 
     public static IoC getInstance(){
