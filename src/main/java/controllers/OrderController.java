@@ -1,6 +1,7 @@
 package controllers;
 
 import entities.Order;
+import entities.OrderStatus;
 import repositories.OrderRepository;
 
 import java.util.List;
@@ -31,5 +32,9 @@ public class OrderController {
 
     public List<Order> findAll(){
         return orderRepository.findAll();
+    }
+
+    public List<Order> findOrdersByStatus(OrderStatus orderStatus){
+        return orderRepository.findOrdersByStatus(orderStatus);
     }
 }

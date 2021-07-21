@@ -1,6 +1,7 @@
 package repositories.impl.map;
 
 import entities.InventoryItem;
+import entities.Item;
 import repositories.InventoryItemRepository;
 import exceptions.EntityNotFoundException;
 
@@ -38,5 +39,16 @@ public class InventoryItemRepositoryImpl implements InventoryItemRepository {
     @Override
     public List<InventoryItem> findAll() {
         return inventoryItemMap.values().stream().collect(Collectors.toList());
+    }
+
+    @Override
+    public boolean checkItemAvailability(Item item) {
+        Optional<InventoryItem> inventoryItem = inventoryItemMap
+                .values()
+                .stream()
+                .filter(o -> o.getItem().getId() == item.getId())
+                .findFirst();
+
+        return inventoryItem.get().getQuantity() > 0;
     }
 }

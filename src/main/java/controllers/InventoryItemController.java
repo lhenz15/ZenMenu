@@ -1,6 +1,7 @@
 package controllers;
 
 import entities.InventoryItem;
+import entities.Item;
 import repositories.InventoryItemRepository;
 
 import java.util.List;
@@ -31,5 +32,9 @@ public class InventoryItemController {
 
     public List<InventoryItem> findAll(){
         return inventoryItemRepository.findAll();
+    }
+
+    public boolean checkItemAvailability(Item item){
+        return inventoryItemRepository.checkItemAvailability(item);
     }
 }

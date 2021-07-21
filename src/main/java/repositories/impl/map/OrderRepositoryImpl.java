@@ -1,6 +1,8 @@
 package repositories.impl.map;
 
+import entities.EmployeeStatus;
 import entities.Order;
+import entities.OrderStatus;
 import repositories.OrderRepository;
 import exceptions.EntityNotFoundException;
 
@@ -39,5 +41,14 @@ public class OrderRepositoryImpl implements OrderRepository {
     @Override
     public List<Order> findAll() {
         return orders.values().stream().collect(Collectors.toList());
+    }
+
+    @Override
+    public List<Order> findOrdersByStatus(OrderStatus orderStatus) {
+        return orders
+                .values()
+                .stream()
+                .filter(o -> o.getStatus() == orderStatus)
+                .collect(Collectors.toList());
     }
 }
