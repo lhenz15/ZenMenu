@@ -45,20 +45,27 @@ public class Utils {
         itemController.add(ketchup);
         itemController.add(bacon);
 
-        List<Item> ingredients = new ArrayList<>();
-        ingredients.add(bread);
-        ingredients.add(angusBurger);
-        ingredients.add(cheese);
-        ingredients.add(lettuce);
-        ingredients.add(tomato);
-        ingredients.add(ketchup);
+        List<Item> cheeseBurgerIngredients = new ArrayList<>();
+        cheeseBurgerIngredients.add(bread);
+        cheeseBurgerIngredients.add(angusBurger);
+        cheeseBurgerIngredients.add(cheese);
+        cheeseBurgerIngredients.add(lettuce);
+        cheeseBurgerIngredients.add(tomato);
+        cheeseBurgerIngredients.add(ketchup);
 
-        Product cheeseBurger = new Product("Cheese Burger", 5.00, ProductType.BURGER, ingredients);
+        List<Item> baconCheeseBurgerIngredients = new ArrayList<>();
+        baconCheeseBurgerIngredients.add(bread);
+        baconCheeseBurgerIngredients.add(angusBurger);
+        baconCheeseBurgerIngredients.add(cheese);
+        baconCheeseBurgerIngredients.add(lettuce);
+        baconCheeseBurgerIngredients.add(tomato);
+        baconCheeseBurgerIngredients.add(ketchup);
+        baconCheeseBurgerIngredients.add(bacon);
 
-        ingredients.add(bacon);
-        Product baconCheeseBurger = new Product("Bacon Cheese Burger", 6.00, ProductType.BURGER, ingredients);
-
+        Product cheeseBurger = new Product("Cheese Burger", 5.00, ProductType.BURGER, cheeseBurgerIngredients);
         productController.add(cheeseBurger);
+
+        Product baconCheeseBurger = new Product("Bacon Cheese Burger", 6.00, ProductType.BURGER, baconCheeseBurgerIngredients);
         productController.add(baconCheeseBurger);
     }
 
@@ -115,7 +122,7 @@ public class Utils {
         List<Order> orders = new ArrayList<>();
         List<OrderDetail> orderDetails = new ArrayList<>();
         List<Product> products = new ArrayList<>();
-        products.add(productController.find(2L));
+        products.add(productController.find(1L));
 
         orderDetails.add(new OrderDetail(productController.findAll(), null));
         orderDetails.add(new OrderDetail(productController.findAll(), null));
